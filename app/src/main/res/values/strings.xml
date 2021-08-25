@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CoronaInfo</string>
+    <string name="salam">Selamat Datang</string>
+    <string name="data_kasus_indonsia">Data kasus Indonsia</string>
+    <string name="total_kasus_terkonfirmasi">Total Kasus Terkonfirmasi</string>
+    <string name="dirawat">Dirawat</string>
+    <string name="sembuh">Sembuh</string>
+    <string name="meninggal">Meninggal</string>
 </resources>

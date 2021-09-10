@@ -6,4 +6,7 @@
     <string name="dirawat">Dirawat</string>
     <string name="sembuh">Sembuh</string>
     <string name="meninggal">Meninggal</string>
+    <string name="kasus_lainnya">Kasus Lainnya</string>
+    <string name="data_dunia">Data Dunia</string>
+    <string name="data_provinsi">Data Provinsi</string>
 </resources>

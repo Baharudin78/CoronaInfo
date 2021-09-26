@@ -1,4 +1,4 @@
-package com.baharudin.coronainfo.model
+package com.baharudin.coronainfo.model.indonesia
 
 data class CoronaIndonesiaResponseItem(
     val meninggal: String,

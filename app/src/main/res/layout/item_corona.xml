@@ -52,142 +52,152 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        android:weightSum="3"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView">
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-            app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
 
-            <View
-                android:layout_width="match_parent"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="120dp"
                 android:layout_height="match_parent"
-                android:background="@color/white" />
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="15dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/ic_add" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/dirawat"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_add" />
 
-            <TextView
-                android:id="@+id/tv_dirawat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="45dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="@color/black"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                tools:text="50000" />
-        </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/dirawat"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="120dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-            app:cardCornerRadius="15dp">
+                <TextView
+                    android:id="@+id/tv_dirawat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:text="50000" />
+            </com.google.android.material.card.MaterialCardView>
 
-            <View
-                android:layout_width="match_parent"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="120dp"
                 android:layout_height="match_parent"
-                android:background="@color/white" />
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="15dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/ic_check" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/sembuh"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_check" />
 
-            <TextView
-                android:id="@+id/tv_sembuh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="45dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="@color/black"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                tools:text="150000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/sembuh"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
 
-        </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:id="@+id/tv_sembuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:text="150000" />
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="120dp"
-            android:layout_height="match_parent"
-            app:cardCornerRadius="15dp">
+            </com.google.android.material.card.MaterialCardView>
 
-            <View
-                android:layout_width="match_parent"
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="120dp"
                 android:layout_height="match_parent"
-                android:background="@color/white" />
+                app:cardCornerRadius="15dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                app:srcCompat="@drawable/ic_close" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="25dp"
-                android:fontFamily="@font/montserrat"
-                android:text="@string/meninggal"
-                android:textColor="@color/black"
-                android:textSize="17sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    app:srcCompat="@drawable/ic_close" />
 
-            <TextView
-                android:id="@+id/tv_meninggal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="45dp"
-                android:fontFamily="@font/montserrat"
-                android:textColor="@color/black"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                tools:text="54000" />
-        </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/meninggal"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_meninggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="45dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    tools:text="54000" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.baharudin.coronainfo.databinding.ItemCoronaBinding
-import com.baharudin.coronainfo.model.CoronaIndonesiaResponseItem
+import com.baharudin.coronainfo.model.indonesia.CoronaIndonesiaResponseItem
 
 class CoronaAdapter : RecyclerView.Adapter<CoronaAdapter.CoronaViewHolder>()  {
 

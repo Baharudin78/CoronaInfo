@@ -1,3 +1,3 @@
-package com.baharudin.coronainfo.model
+package com.baharudin.coronainfo.model.indonesia
 
 class CoronaIndonesiaResponse : ArrayList<CoronaIndonesiaResponseItem>()

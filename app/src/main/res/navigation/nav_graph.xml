@@ -9,5 +9,22 @@
         android:id="@+id/homeFragment"
         android:name="com.baharudin.coronainfo.ui.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_provinceFragment"
+            app:destination="@id/provinceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_worldFragment"
+            app:destination="@id/worldFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/worldFragment"
+        android:name="com.baharudin.coronainfo.ui.fragment.WorldFragment"
+        android:label="fragment_world"
+        tools:layout="@layout/fragment_world" />
+    <fragment
+        android:id="@+id/provinceFragment"
+        android:name="com.baharudin.coronainfo.ui.fragment.ProvinceFragment"
+        android:label="fragment_province"
+        tools:layout="@layout/fragment_province" />
 </navigation>

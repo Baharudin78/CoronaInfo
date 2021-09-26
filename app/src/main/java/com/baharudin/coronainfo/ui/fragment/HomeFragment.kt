@@ -6,11 +6,12 @@ import android.util.Log
 import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.baharudin.coronainfo.R
 import com.baharudin.coronainfo.adapter.CoronaAdapter
 import com.baharudin.coronainfo.databinding.FragmentHomeBinding
-import com.baharudin.coronainfo.model.CoronaIndonesiaResponse
+import com.baharudin.coronainfo.model.indonesia.CoronaIndonesiaResponse
 import com.baharudin.coronainfo.ui.CoronaViewModel
 import com.baharudin.coronainfo.ui.MainActivity
 import com.baharudin.coronainfo.util.Resource
@@ -39,7 +40,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val formatted = current.format(formatter)
         binding.tvTanggal.text = formatted
 
+        binding.mcWorld.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_worldFragment)
+        }
+        binding.mcProvince.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_provinceFragment)
+        }
 
+        getDataIndonesia()
+    }
+    private fun getDataIndonesia() {
         coronaViewModel.getIndonesiaCase.observe(viewLifecycleOwner, {
             when(it) {
                 is Resource.Success -> {
@@ -61,7 +71,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 }
             }
         })
-
     }
 
     private fun showProgress() {

@@ -1,9 +1,11 @@
 package com.baharudin.coronainfo.api
 
+import com.baharudin.coronainfo.model.country.CountryResponse
 import com.baharudin.coronainfo.model.indonesia.CoronaIndonesiaResponse
 import com.baharudin.coronainfo.model.world.WorldDataResponse
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface CoronaApi {
     @GET("indonesia")

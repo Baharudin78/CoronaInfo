@@ -37,6 +37,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/searchBar"
+                android:drawableStart="@drawable/ic_search"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginStart="32dp"
@@ -47,25 +48,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/searchBar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/searchBar"
-                app:layout_constraintTop_toTopOf="@+id/searchBar"
-                app:srcCompat="@drawable/ic_search" />
 
             <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/searchBar"
-                android:layout_marginEnd="16dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                app:layout_constraintTop_toBottomOf="@id/searchBar">
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
@@ -159,6 +153,7 @@
 
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="120dp"
+                        android:layout_gravity="end"
                         android:layout_height="match_parent"
                         app:cardCornerRadius="15dp">
 
@@ -199,6 +194,8 @@
 
                 </LinearLayout>
             </HorizontalScrollView>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>

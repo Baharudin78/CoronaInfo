@@ -22,6 +22,7 @@ class WorldFragment : Fragment(R.layout.fragment_world) {
 
         coronaViewModel = (activity as MainActivity).coronaViewModel
 
+
         getResultPositif()
         getSembuhCase()
         getMeninggalCase()
@@ -91,10 +92,12 @@ class WorldFragment : Fragment(R.layout.fragment_world) {
             }
         })
     }
+
     private fun showProgress() {
         binding.progressBar2.visibility = View.VISIBLE
     }
     private fun hideProgress() {
         binding.progressBar2.visibility = View.GONE
     }
+
 }

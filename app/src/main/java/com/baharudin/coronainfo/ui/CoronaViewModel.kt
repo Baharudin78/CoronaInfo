@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class CoronaViewModel(
-    val repository: CoronaRepository
+    private val repository: CoronaRepository
 ) : ViewModel() {
 
     val getIndonesiaCase : MutableLiveData <Resource<CoronaIndonesiaResponse>> = MutableLiveData()
@@ -26,28 +26,28 @@ class CoronaViewModel(
         getMeninggalCase()
     }
 
-    fun getIndonesiaCase() = viewModelScope.launch {
+    private fun getIndonesiaCase() = viewModelScope.launch {
         getIndonesiaCase.postValue(Resource.Loading())
         val response = repository.getIndonesiaCase()
         getIndonesiaCase.postValue(handleResponse(response))
     }
-    fun getPositifCase() = viewModelScope.launch {
+    private fun getPositifCase() = viewModelScope.launch {
         getIndonesiaCase.postValue(Resource.Loading())
         val response = repository.getPositifCase()
         getPositifCase.postValue(handleResponsePositif(response))
     }
-    fun getSembuhCase() = viewModelScope.launch {
+    private fun getSembuhCase() = viewModelScope.launch {
         getSembuhCase.postValue(Resource.Loading())
         val sembuhResponse = repository.getSembuhCase()
         getSembuhCase.postValue(handleResponseSembuh(sembuhResponse))
     }
-    fun getMeninggalCase() = viewModelScope.launch {
+    private fun getMeninggalCase() = viewModelScope.launch {
         getMeninggalCase.postValue(Resource.Loading())
         val response = repository.getMeninggalCase()
         getMeninggalCase.postValue(handleMeninggalCase(response))
     }
 
-    private fun handleMeninggalCase(response: Response<WorldDataResponse>): Resource<WorldDataResponse>? {
+    private fun handleMeninggalCase(response: Response<WorldDataResponse>): Resource<WorldDataResponse> {
         if (response.isSuccessful) {
             response.body()?.let { result ->
                 return Resource.Success(result)
@@ -56,7 +56,7 @@ class CoronaViewModel(
         return Resource.Error(response.message())
     }
 
-    private fun handleResponseSembuh(sembuhResponse: Response<WorldDataResponse>): Resource<WorldDataResponse>? {
+    private fun handleResponseSembuh(sembuhResponse: Response<WorldDataResponse>): Resource<WorldDataResponse> {
         if (sembuhResponse.isSuccessful) {
             sembuhResponse.body()?.let { result ->
                 return Resource.Success(result)

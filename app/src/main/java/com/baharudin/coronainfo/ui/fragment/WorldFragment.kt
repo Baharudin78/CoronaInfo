@@ -29,8 +29,8 @@ class WorldFragment : Fragment(R.layout.fragment_world) {
 
     }
     private fun getResultPositif() {
-        coronaViewModel.getPositifCase.observe(viewLifecycleOwner, {response ->
-            when(response) {
+        coronaViewModel.getPositifCase.observe(viewLifecycleOwner) { response ->
+            when (response) {
                 is Resource.Success -> {
                     response.data?.let { result ->
                         hideProgress()
@@ -47,11 +47,11 @@ class WorldFragment : Fragment(R.layout.fragment_world) {
                     showProgress()
                 }
             }
-        })
+        }
     }
     private fun getSembuhCase() {
-        coronaViewModel.getSembuhCase.observe(viewLifecycleOwner, {response ->
-            when(response) {
+        coronaViewModel.getSembuhCase.observe(viewLifecycleOwner) { response ->
+            when (response) {
                 is Resource.Success -> {
                     response.data?.let { result ->
                         hideProgress()
@@ -68,12 +68,12 @@ class WorldFragment : Fragment(R.layout.fragment_world) {
                     showProgress()
                 }
             }
-        })
+        }
     }
 
     private fun getMeninggalCase() {
-        coronaViewModel.getMeninggalCase.observe(viewLifecycleOwner, {response ->
-            when(response) {
+        coronaViewModel.getMeninggalCase.observe(viewLifecycleOwner) { response ->
+            when (response) {
                 is Resource.Success -> {
                     response.data?.let { result ->
                         hideProgress()
@@ -83,14 +83,14 @@ class WorldFragment : Fragment(R.layout.fragment_world) {
                 is Resource.Error -> {
                     response.messege?.let {
                         hideProgress()
-                        Log.e("meninggal",response.messege)
+                        Log.e("meninggal", response.messege)
                     }
                 }
                 is Resource.Loading -> {
                     showProgress()
                 }
             }
-        })
+        }
     }
 
     private fun showProgress() {
